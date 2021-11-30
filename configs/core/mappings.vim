@@ -1,3 +1,6 @@
+" remap leader key 
+let mapleader = " "	
+
 " disable arrow keys 
 nnoremap <Left> :echo "No left key!"<CR>
 nnoremap <Right> :echo "No right key!" <CR>
@@ -9,3 +12,5 @@ vnoremap <Right> <Esc> :echo "No right key!" <CR>
 vnoremap <Up> <Esc> :echo "No up key!" <CR>
 vnoremap <Down> <Esc> :echo "No down key!" <CR>
 
+" enable / disable wrap 
+nnoremap <Leader>w :set wrap! <CR>

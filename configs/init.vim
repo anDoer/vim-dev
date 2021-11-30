@@ -1,4 +1,5 @@
 let g:config_files = [
+      \ 'options.vim',
       \ 'mappings.vim',
       \ 'plugins.vim',
       \ 'themes.vim'
