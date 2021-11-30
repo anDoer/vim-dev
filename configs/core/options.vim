@@ -11,6 +11,9 @@ set updatetime=300		" faster refresh rate
 set laststatus=2		" always display status bar 
 set cmdheight=2			" more space for status messegases
 set nowrap				" disables wrap, can be enables with Leader w
+set splitbelow 
+set splitright 
+
 
 " Tab configuration
 set tabstop=4			" how many spaces does a tab have 

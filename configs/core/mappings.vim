@@ -32,3 +32,18 @@ inoremap <C-A-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-A-j> :m '>+1<CR>gv=gv
 vnoremap <C-A-k> :m '<-2<CR>gv=gv
 
+" Navigation through splits
+nnoremap ,v :vsplit<CR>      " creates vertical split 
+nnoremap ,h :split<CR>       " creates horizontal split
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Resizing splits 
+nnoremap <silent> ,+ :vertical resize +5<CR>
+nnoremap <silent> ,- :vertical resize -5<CR>
+nnoremap <silent> ,* :resize +5<CR>
+nnoremap <silent> ,_ :resize -5<CR>
+nnoremap ,= <C-w>=
+
