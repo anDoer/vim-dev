@@ -2,6 +2,8 @@
 nnoremap <Space> <nop>
 let mapleader = " "	
 
+" reload config file 
+nnoremap <leader>R :source ~/.config/nvim/init.vim
 " disable arrow keys 
 nnoremap <Left> :echo "No left key!"<CR>
 nnoremap <Right> :echo "No right key!" <CR>
@@ -23,6 +25,10 @@ nnoremap <silent> <leader>j :bn!<CR>
 " Open files and last session
 nnoremap <leader>S :LoadLastSession<CR>
 map <silent> <leader>o :call NERDTreeToggle()<CR>
+
+" Open a terminal in new split 
+nnoremap <silent> <leader>T :split<CR> :term<CR>
+tnoremap <Esc> <C-\><C-n>
 
 " Moving of lines up and down
 nnoremap <C-A-j> :m .+1<CR>==
