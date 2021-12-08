@@ -1,6 +1,12 @@
 #!/bin/bash 
 
-sudo apt-get install -y python3-minimal python3-pip nodejs npm 
+sudo apt-get install -y python3-minimal python3-pip 
+
+# we need to add current version of nodejs -> ubuntu 20.04 does not offer latest versions 
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install nodejs  
+
+
 sudo -H python3 -m pip install --upgrade pip
 python3 -m pip install --user --upgrade pynvim
 python3 -m pip install --user jedi-language-server

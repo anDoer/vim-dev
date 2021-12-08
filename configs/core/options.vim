@@ -45,3 +45,59 @@ set directory=~/.local/share/nvim/swap		" directory for swap files
 set nobackup					" Immediately delete backup file, we can use undofiles to restore changes
 set hidden					" we can change buffers if file is not saved 
 
+" Lightline colorscheme + Vista in status bar 
+let g:lightline = {             
+      \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'method' ] ]
+      \ },
+      \ 'component_function': {
+      \   'method': 'NearestMethodOrFunction'
+      \ },
+      \ }
+
+" Optimize internal file manager (Explore, VExplore, SExplore) 
+let g:netrw_banner = 0          " disable banner
+let g:netrw_browse_split = 4    " open in same window
+let g:netrw_altv = 1            " open split right hand side 
+let g_netrw_liststyle = 3       " Tree view 
+let g:netrw_winsize = 25        " smaller window 
+let g:netrw_list_hide = netrw_gitignore#Hide()    " ignore git 
+let g:netrw_list_hide.=',\(^\|\s\s)\zs\.\S\+'     " ignore dot files 
+
+let vim_markdown_preview_github = 1         " Show markdown github extension
+
+" NerdTree configuration 
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let NERDTreeMinimalUI = 1
+let g:nerdtree_open = 0 
+
+" COC configuration
+" automatically install COC extensions 
+let g:coc_global_extensions = [
+      \'coc-snippets',
+      \'coc-prettier',
+      \'coc-jedi',
+      \'coc-html',
+      \'coc-highlight',
+      \'coc-eslint',
+      \'coc-tsserver', 
+      \'coc-json', 
+      \'coc-css', 
+      \'coc-git'
+      \]
+
+" coc-highlight - Gleiche Wörter im Code markieren
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" Zeigt Fehler mit Markierung der Zeile an und Fehlercode, wenn man auf der Zeile steht
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder.
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Mit :Format wird der Code automatisch formatiert
+command! -nargs=0 Format :call CocAction('format')

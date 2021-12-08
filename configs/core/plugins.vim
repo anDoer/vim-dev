@@ -7,11 +7,19 @@ endif
 
 
 call plug#begin()
-Plug 'morhetz/gruvbox'          " Color Theme
+Plug 'morhetz/gruvbox'                  " Color Theme
+Plug 'preservim/nerdtree'               " File Browsers
+Plug 'Xuyuanp/nerdtree-git-plugin'      " Nerdtree git plugin
+Plug 'airblade/vim-gitgutter'           " Show git changes
+Plug 'mbbill/undotree'                  " Anzeigen von alten Revisionen
+Plug 'vim-scripts/SearchComplete'       " activate autocompletion in search 
+Plug 'itchyny/lightline.vim'            " statusbar
+Plug '9mm/vim-closer'                   " intelligent braces and co 
+Plug 'liuchengxu/vista.vim'             " show functions, variables
+Plug 'neoclide/coc.nvim'                " autocomplete
 
-call plug#end() " Plugins aktivieren
+call plug#end() " activate plugins
 
-" Automatisch fehlende Plugins installieren
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
