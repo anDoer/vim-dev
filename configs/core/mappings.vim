@@ -55,6 +55,11 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <silent> <leader>k :bp!<CR>
 nnoremap <silent> <leader>j :bn!<CR>
 
+" Tabs 
+" <leader>t generates new tab 
+" gt navigate to next tab 
+" gT navigate to prev tab
+
 " Resizing splits 
 nnoremap <silent> ,+ :vertical resize +5<CR>
 nnoremap <silent> ,- :vertical resize -5<CR>

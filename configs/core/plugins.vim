@@ -16,7 +16,7 @@ Plug 'vim-scripts/SearchComplete'       " activate autocompletion in search
 Plug 'itchyny/lightline.vim'            " statusbar
 Plug '9mm/vim-closer'                   " intelligent braces and co 
 Plug 'liuchengxu/vista.vim'             " show functions, variables
-Plug 'neoclide/coc.nvim'                " autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 call plug#end() " activate plugins
 

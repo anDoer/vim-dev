@@ -79,12 +79,9 @@ let g:coc_global_extensions = [
       \'coc-snippets',
       \'coc-prettier',
       \'coc-jedi',
-      \'coc-html',
       \'coc-highlight',
       \'coc-eslint',
-      \'coc-tsserver', 
       \'coc-json', 
-      \'coc-css', 
       \'coc-git'
       \]
 
