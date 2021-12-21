@@ -56,7 +56,8 @@ nnoremap <silent> <leader>k :bp!<CR>
 nnoremap <silent> <leader>j :bn!<CR>
 
 " Tabs 
-" <leader>t generates new tab 
+nnoremap <silent> tn :tabnew<CR>
+nnoremap <silent> tc :tabc<CR> 
 " gt navigate to next tab 
 " gT navigate to prev tab
 
@@ -77,14 +78,28 @@ imap <C-v> <ESC>"+pa
 nnoremap <leader>u :UndotreeToggle<CR>
 
 " COC Bindings
+" <Tab>: completion 
+"
 
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <silent><expr> <Tab>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<Tab>" : 
+    \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Use `[g` and `]g` to navigate diagnostics

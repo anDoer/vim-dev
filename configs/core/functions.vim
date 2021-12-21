@@ -40,7 +40,7 @@ function! StartUp()
     end
 endfunction
 
-autocmd VimEnter * call StartUp()       " open NerdTree, if no file is opened 
+"autocmd VimEnter * call StartUp()       " open NerdTree, if no file is opened 
 
 " COC: show documentation 
 function! s:show_documentation()
@@ -53,7 +53,8 @@ function! s:show_documentation()
   endif
 endfunction
 
+
 function! s:check_back_space() abort
   let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+  return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
