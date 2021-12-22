@@ -10,7 +10,6 @@ call plug#begin()
 Plug 'morhetz/gruvbox'                  " Color Theme
 Plug 'preservim/nerdtree'               " File Browsers
 Plug 'Xuyuanp/nerdtree-git-plugin'      " Nerdtree git plugin
-Plug 'airblade/vim-gitgutter'           " Show git changes
 Plug 'mbbill/undotree'                  " Anzeigen von alten Revisionen
 Plug 'vim-scripts/SearchComplete'       " activate autocompletion in search 
 Plug 'itchyny/lightline.vim'            " statusbar

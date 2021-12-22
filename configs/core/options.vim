@@ -50,10 +50,10 @@ let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'method' ] ]
+      \             ['cocstatus', 'readonly', 'filename', 'modified'] ]
       \ },
       \ 'component_function': {
-      \   'method': 'NearestMethodOrFunction'
+      \   'cocstatus': 'coc#status'
       \ },
       \ }
 
