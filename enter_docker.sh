@@ -8,5 +8,6 @@ docker run\
   --shm-size="2g"\
   -v "$SRC_DIR":/home/user/vim_install/ \
   -it\
+  --rm \
   andoer/neovim\
   /bin/bash 

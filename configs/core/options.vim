@@ -82,7 +82,8 @@ let g:coc_global_extensions = [
       \'coc-highlight',
       \'coc-eslint',
       \'coc-json', 
-      \'coc-git'
+      \'coc-git',
+      \'coc-vimlsp'
       \]
 
 " coc-highlight - Gleiche Wörter im Code markieren
