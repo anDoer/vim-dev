@@ -48,3 +48,4 @@ echo "RUN nvim --headless +'CocUpdateSync' +qall" >> Dockerfile
 echo "USER root" >> Dockerfile
 echo "RUN deluser $USERNAME sudo" >> Dockerfile 
 echo "RUN mv /etc/sudoers.bak /etc/sudoers" >> Dockerfile
+echo "USER $USERNAME" >> Dockerfile 
