@@ -14,6 +14,7 @@ fi
 USERNAME=$1 
 PATH=$2 
 
+echo "USER root" >> Dockerfile
 # Backup sudoers file 
 echo "RUN cp /etc/sudoers /etc/sudoers.bak" >> Dockerfile 
 
