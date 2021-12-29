@@ -5,7 +5,7 @@
 # 2) the vim installation directory
 # 3) the current PATH variable 
 echo $#
-    if [ "$#" -ne "2" ]
+    if [ "$#" -ne "3" ]
 then 
     echo "$0 requires the following arguments: USERNAME PATH_VARIABLE"
     exit -1
@@ -13,6 +13,7 @@ fi
 
 USERNAME=$1 
 PATH=$2 
+VIMDEV_PATH=$3
 
 echo "USER root" >> Dockerfile
 # Backup sudoers file 
@@ -25,9 +26,9 @@ echo "RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers" >> Dockerfile
 echo "USER $USERNAME" >> Dockerfile
 
 echo "WORKDIR /home/$USERNAME/vim_install" >> Dockerfile
-echo "COPY install_python_docker.sh /home/$USERNAME/vim_install/install_python_docker.sh" >> Dockerfile
-echo "COPY install.sh /home/$USERNAME/vim_install/install.sh" >> Dockerfile
-echo "COPY configs /home/$USERNAME/vim_install/configs">> Dockerfile
+echo "COPY $VIMDEV_PATH/install_python_docker.sh /home/$USERNAME/vim_install/install_python_docker.sh" >> Dockerfile
+echo "COPY $VIMDEV_PATH/install.sh /home/$USERNAME/vim_install/install.sh" >> Dockerfile
+echo "COPY $VIMDEV_PATH/configs /home/$USERNAME/vim_install/configs">> Dockerfile
 echo "ENV NPM_PACKAGES /home/$USERNAME/.npm-packages" >> Dockerfile
 # We need to include miniconda as well!
 echo "ENV PATH /home/$USERNAME/.npm-packages/bin:$PATH" >> Dockerfile
