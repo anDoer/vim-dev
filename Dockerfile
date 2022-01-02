@@ -31,3 +31,4 @@ RUN pip install opencv-python
 RUN apt-get -y install sudo
 RUN apt-get -y install neovim
 RUN chmod -R 777 /opt/miniconda3
+RUN apt-get install xclip
