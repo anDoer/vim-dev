@@ -1,4 +1,6 @@
 # vim-dev
+My configuration to turn neovim into an ide with python support 
+
 ## Installation
 To install nvim-plugins with support for CoC and python, run 
 ```
