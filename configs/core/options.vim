@@ -98,3 +98,6 @@ augroup end
 
 " Mit :Format wird der Code automatisch formatiert
 command! -nargs=0 Format :call CocAction('format')
+
+" Configuration of indentLine
+let g:indentLine_setColors = 0  " do not override colors of colorscheme

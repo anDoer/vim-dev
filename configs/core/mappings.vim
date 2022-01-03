@@ -28,7 +28,7 @@ map <silent> <leader>o :call NERDTreeToggle()<CR>
 
 " Open a terminal in new split 
 nnoremap <silent> <leader>T :split<CR> :term bash<CR>
-tnoremap <Esc> <C-\><C-n>
+tnoremap <C-A-c> <C-\><C-n>
 
 " Moving of lines up and down
 nnoremap <C-A-j> :m .+1<CR>==

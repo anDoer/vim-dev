@@ -16,6 +16,7 @@ Plug 'itchyny/lightline.vim'            " statusbar
 Plug '9mm/vim-closer'                   " intelligent braces and co 
 Plug 'liuchengxu/vista.vim'             " show functions, variables
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'Yggdroot/indentLine'
 
 call plug#end() " activate plugins
 
