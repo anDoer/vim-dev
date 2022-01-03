@@ -8,7 +8,7 @@ echo "RUN adduser --disabled-password --gecos \"\" -u $UID $USERNAME"  >> Docker
 PATH="/opt/miniconda3/bin:$PATH" 
 
 ###########################################
-./build_nvim_docker.sh $USERNAME $PATH    
+./external_docker_install/build_nvim_docker.sh $USERNAME $PATH .
 ###########################################
 
 docker build --tag andoer/neovim . 
