@@ -14,6 +14,8 @@ set nowrap				" disables wrap, can be enables with Leader w
 set splitbelow 
 set splitright 
 
+"clipboard
+set clipboard^=unnamed,unnamedplus
 
 " Tab configuration
 set tabstop=4			" how many spaces does a tab have 

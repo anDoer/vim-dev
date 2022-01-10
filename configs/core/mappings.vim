@@ -27,7 +27,7 @@ nnoremap <leader>S :LoadLastSession<CR>
 map <silent> <leader>o :call NERDTreeToggle()<CR>
 
 " Open a terminal in new split 
-nnoremap <silent> <leader>T :split<CR> :term bash<CR>
+nnoremap <silent> <leader>T :bo split<CR> :term bash<CR>
 tnoremap <C-A-c> <C-\><C-n>
 
 " Moving of lines up and down
@@ -73,6 +73,9 @@ vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
+
+" enter insert mode with mouse click 
+nnoremap <LeftMouse> <LeftMouse>i
 
 " file history 
 nnoremap <leader>u :UndotreeToggle<CR>
