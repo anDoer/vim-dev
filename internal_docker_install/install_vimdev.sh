@@ -5,7 +5,7 @@
 # 2) the vim installation directory
 # 3) the current PATH variable 
 echo $#
-    if [ "$#" -ne "3" ]
+    if [ "$#" -ne "2" ]
 then 
     echo "$0 requires the following arguments: USERNAME PATH_VARIABLE"
     exit -1
@@ -13,11 +13,7 @@ fi
 
 USERNAME=$1 
 PATH=$2 
-VIMDEV_PATH=$3
 
-cp /etc/sudoers /etc/sudoers.bak 
-usermod -aG sudo $USERNAME 
-su $USERNAME 
 export NPM_PACKAGES=/home/$USERNAME/.npm-packages 
 export PATH=/home/$USERNAME/.npm-packages/bin:$PATH 
 echo "export NPM_PACKAGES=/home/$USERNAME/.npm-packages" >> /home/$USERNAME/.bashrc
@@ -38,9 +34,4 @@ nvim --headless +'CocInstall -sync coc-json' +qall
 nvim --headless +'CocInstall -sync coc-git' +qall
 nvim --headless +'CocUpdateSync' +qall
 
-# Remove user from sudoers 
-sudo su root
-deluser $USERNAME sudo
-mv /etc/sudoers.bak /etc/sudoers 
-su $USERNAME
 
