@@ -22,14 +22,6 @@ echo "export PATH=/home/$USERNAME/.npm-packages/bin:$PATH" >> /home/$USERNAME/.b
 echo "alias vim='nvim'" >> /home/$USERNAME/.bashrc 
 
 bash $VIMDEV_PATH/install_python_docker.sh /home/$USERNAME
- 
-/usr/bin/nvim --headless +PlugInstall +qall
-/usr/bin/nvim --headless +'CocInstall -sync coc-snippets' +qall
-/usr/bin/nvim --headless +'CocInstall -sync coc-prettier' +qall
-/usr/bin/nvim --headless +'CocInstall -sync coc-jedi' +qall
-/usr/bin/nvim --headless +'CocInstall -sync coc-highlight' +qall
-/usr/bin/nvim --headless +'CocInstall -sync coc-eslint' +qall
-/usr/bin/nvim --headless +'CocInstall -sync coc-json' +qall
-/usr/bin/nvim --headless +'CocInstall -sync coc-git' +qall
-/usr/bin/nvim --headless +'CocUpdateSync' +qall
+
+bash $VIMDEV_PATH/internal_docker_install/install_plugins.sh 
 
