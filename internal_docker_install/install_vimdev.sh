@@ -23,13 +23,13 @@ echo "alias vim='nvim'" >> /home/$USERNAME/.bashrc
 
 bash $VIMDEV_PATH/install_python_docker.sh /home/$USERNAME
  
-nvim --headless +PlugInstall +qall
-nvim --headless +'CocInstall -sync coc-snippets' +qall
-nvim --headless +'CocInstall -sync coc-prettier' +qallDOCKERFILE
-nvim --headless +'CocInstall -sync coc-jedi' +qall
-nvim --headless +'CocInstall -sync coc-highlight' +qall
-nvim --headless +'CocInstall -sync coc-eslint' +qall
-nvim --headless +'CocInstall -sync coc-json' +qall
-nvim --headless +'CocInstall -sync coc-git' +qall
-nvim --headless +'CocUpdateSync' +qall
+#nvim --headless +PlugInstall +qall
+#nvim --headless +'CocInstall -sync coc-snippets' +qall
+#nvim --headless +'CocInstall -sync coc-prettier' +qall
+#nvim --headless +'CocInstall -sync coc-jedi' +qall
+#nvim --headless +'CocInstall -sync coc-highlight' +qall
+#nvim --headless +'CocInstall -sync coc-eslint' +qall
+#nvim --headless +'CocInstall -sync coc-json' +qall
+#nvim --headless +'CocInstall -sync coc-git' +qall
+#nvim --headless +'CocUpdateSync' +qall
 
