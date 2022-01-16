@@ -12,7 +12,7 @@ cp /etc/sudoers /etc/sudoers.bak
 usermod -aG sudo $USERNAME 
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers 
 
-su - $USERNAME -c "$VIMDEV_PATH/internal_docker_install/install_vimdev.sh $USERNAME $PATH $VIMDEV_PATH" 
+#su - $USERNAME -c "$VIMDEV_PATH/internal_docker_install/install_vimdev.sh $USERNAME $PATH $VIMDEV_PATH" 
 
 su - $USERNAME -c "cd $VIMDEV_PATH && bash $VIMDEV_PATH/install.sh"
 
