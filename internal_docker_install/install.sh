@@ -14,17 +14,8 @@ echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 su - $USERNAME -c "$VIMDEV_PATH/internal_docker_install/install_vimdev.sh $USERNAME $PATH $VIMDEV_PATH" 
 
-bash $VIMDEV_PATH/install.sh
+su - $USERNAME -c "$VIMDEV_PATH/install.sh"
 
-nvim --headless +PlugInstall +qall
-nvim --headless +'CocInstall -sync coc-snippets' +qall
-nvim --headless +'CocInstall -sync coc-prettier' +qallDOCKERFILE
-nvim --headless +'CocInstall -sync coc-jedi' +qall
-nvim --headless +'CocInstall -sync coc-highlight' +qall
-nvim --headless +'CocInstall -sync coc-eslint' +qall
-nvim --headless +'CocInstall -sync coc-json' +qall
-nvim --headless +'CocInstall -sync coc-git' +qall
-nvim --headless +'CocUpdateSync' +qall
 
 
 deluser $USERNAME sudo
