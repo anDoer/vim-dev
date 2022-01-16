@@ -6,7 +6,7 @@ fi
 
 USERNAME=$1
 PATH=$2 
-$VIMDEV_PATH=$3
+VIMDEV_PATH=$3
 
 cp /etc/sudoers /etc/sudoers.bak 
 usermod -aG sudo $USERNAME 
