@@ -14,8 +14,8 @@ echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 su - $USERNAME -c "bash $VIMDEV_PATH/internal_docker_install/install_vimdev.sh $USERNAME $PATH $VIMDEV_PATH" 
 
-su - $USERNAME -c "cd $VIMDEV_PATH && bash $VIMDEV_PATH/install.sh"
-su - $USERNAME -c "cd $VIMDEV_PATH && bash $VIMDEV_PATH/internal_docker_install/install_plugins.sh"
+#su - $USERNAME -c "cd $VIMDEV_PATH && bash $VIMDEV_PATH/install.sh"
+#su - $USERNAME -c "cd $VIMDEV_PATH && bash $VIMDEV_PATH/internal_docker_install/install_plugins.sh"
 
 deluser $USERNAME sudo
 mv /etc/sudoers.bak /etc/sudoers 

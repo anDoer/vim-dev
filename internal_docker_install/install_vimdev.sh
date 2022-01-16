@@ -23,3 +23,5 @@ echo "alias vim='nvim'" >> /home/$USERNAME/.bashrc
 
 bash $VIMDEV_PATH/install_python_docker.sh /home/$USERNAME
 
+cd $VIMDEV_PATH && bash $VIMDEV_PATH/install.sh
+bash $VIMDEV_PATH/internal_docker_install/install_plugins.sh
