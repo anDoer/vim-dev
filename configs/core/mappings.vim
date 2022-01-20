@@ -74,9 +74,6 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-" enter insert mode with mouse click 
-nnoremap <LeftMouse> <LeftMouse>i
-
 " file history 
 nnoremap <leader>u :UndotreeToggle<CR>
 
