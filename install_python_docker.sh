@@ -8,7 +8,7 @@ sudo apt-get update
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install nodejs 
 
-pip install --upgrade pynvim
+pip install --upgrade pynvim pygls
 conda install -y jedi 
 
 # install packages as non-root user 
