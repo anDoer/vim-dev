@@ -3,7 +3,7 @@ nnoremap <Space> <nop>
 let mapleader = " "	
 
 " reload config file 
-nnoremap <leader>R :source ~/.config/nvim/init.vim
+nnoremap <leader>R :source ~/.config/nvim/init.vim<CR>
 " disable arrow keys 
 nnoremap <Left> :echo "No left key!"<CR>
 nnoremap <Right> :echo "No right key!" <CR>
@@ -62,10 +62,10 @@ nnoremap <silent> tc :tabc<CR>
 " gT navigate to prev tab
 
 " Resizing splits 
-nnoremap <silent> ,+ :vertical resize +5<CR>
-nnoremap <silent> ,- :vertical resize -5<CR>
-nnoremap <silent> ,* :resize +5<CR>
-nnoremap <silent> ,_ :resize -5<CR>
+nnoremap <silent> <C-Right> :vertical resize +5<CR>
+nnoremap <silent> <C-Left> :vertical resize -5<CR>
+nnoremap <silent> <C-Up> :resize +5<CR>
+nnoremap <silent> <C-Down> :resize -5<CR>
 nnoremap ,= <C-w>=
 
 " copy, cut and paste 
