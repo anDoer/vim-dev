@@ -11,7 +11,7 @@ sudo apt-get install nodejs
 
 
 sudo -H python3 -m pip install --upgrade pip
-python3 -m pip install --user --upgrade pynvim
+python3 -m pip install --user --upgrade pynvim pygls
 python3 -m pip install --user jedi-language-server
 
 # install packages as non-root user 

@@ -3,10 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV PATH /opt/miniconda3/bin:$PATH
 ENV CPLUS_INCLUDE_PATH /opt/miniconda3/include
 
-RUN apt-get update
-RUN apt-get install -y apt-file
-RUN apt-get update
-RUN apt-get install -y build-essential \
+RUN apt-get update && apt-get install -y apt-file build-essential \
     checkinstall \
     cmake \
     pkg-config \
