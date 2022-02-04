@@ -13,6 +13,7 @@ set cmdheight=2			" more space for status messegases
 set nowrap				" disables wrap, can be enables with Leader w
 set splitbelow 
 set splitright 
+set noequalalways       " Disables resizing windows to a unique size, if a window was closed (very annoying)
 
 "clipboard
 set clipboard^=unnamed,unnamedplus
