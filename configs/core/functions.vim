@@ -58,3 +58,11 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
+
+
+" Sends complete file to an interactive ipython when pressing F9
+nnoremap <silent> <F9> :call RunInIpythonNormal()<CR>
+function RunInIpythonNormal()
+    silent execute "update | edit"
+    silent execute '!st -e ipython3 -i' shellescape(@%, 1) '&'
+endfunction
