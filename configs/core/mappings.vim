@@ -104,7 +104,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)   " Anpassung für deutsche Tastatur
+nmap <silent> [g <Plug>(coc-diagnostic-prev)   
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Use <c-space> to trigger completion 
