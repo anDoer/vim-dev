@@ -68,6 +68,9 @@ nnoremap <silent> <C-Up> :resize +5<CR>
 nnoremap <silent> <C-Down> :resize -5<CR>
 nnoremap ,= <C-w>=
 
+" Select entire content 
+nnoremap <C-a> ggVG
+
 " copy, cut and paste 
 vmap <C-c> "+y
 vmap <C-x> "+c
