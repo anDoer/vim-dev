@@ -15,6 +15,16 @@ vnoremap <Right> <Esc> :echo "No right key!" <CR>
 vnoremap <Up> <Esc> :echo "No up key!" <CR>
 vnoremap <Down> <Esc> :echo "No down key!" <CR>
 
+" Undo break points -> break undo sequence, start new change 
+inoremap , ,<c-g>u 
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap ( (<c-g>u
+inoremap [ [<c-g>u
+inoremap ) )<c-g>u
+inoremap ] ]<c-g>u
+
 " enable / disable wrap 
 nnoremap <Leader>w :set wrap! <CR>
 
