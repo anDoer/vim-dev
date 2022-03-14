@@ -2,9 +2,9 @@
 nnoremap <Space> <nop>
 let mapleader = " "	
 
-inoremap <C-C> <Esc>
-nnoremap <C-C> <Esc> 
-vnoremap <C-C> <Esc> 
+inoremap <C><C> <Esc>
+nnoremap <C><C> <Esc> 
+vnoremap <C><C> <Esc> 
 
 " reload config file 
 nnoremap <leader>R :source ~/.config/nvim/init.vim<CR>
