@@ -2,6 +2,10 @@
 nnoremap <Space> <nop>
 let mapleader = " "	
 
+inoremap <C-C> <Esc>
+nnoremap <C-C> <Esc> 
+vnoremap <C-C> <Esc> 
+
 " reload config file 
 nnoremap <leader>R :source ~/.config/nvim/init.vim<CR>
 " disable arrow keys 
@@ -79,7 +83,7 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 nnoremap ,= <C-w>=
 
 " Select entire content 
-nnoremap <C-a> ggVG
+nnoremap <leader>a ggVG
 
 " copy, cut and paste 
 vmap <C-c> "+y
