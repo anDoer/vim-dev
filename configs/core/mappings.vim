@@ -49,8 +49,6 @@ vnoremap <C-A-j> :m '>+1<CR>gv=gv
 vnoremap <C-A-k> :m '<-2<CR>gv=gv
 
 " Shift + Tab for inverse shift 
-nnoremap <Tab> >>
-nnoremap <S-Tab> << 
 inoremap <S-Tab> <C-d>
 
 " Navigation through splits
