@@ -37,7 +37,7 @@ if !isdirectory($HOME."/.local/share/nvim/undodir")
     call mkdir($HOME."/.local/share/nvim/undodir", "p", 0700)
 endif
 
-set undodir=~/.local/share/nvim/undodir		" store all changes in this directory 
+set undodir=~/.local/share/nvim/undodir/	" store all changes in this directory 
 set undofile 
 
 if !isdirectory($HOME."/.local/share/nvim/swap")
@@ -50,7 +50,7 @@ set hidden					" we can change buffers if file is not saved
 
 " Lightline colorscheme + Vista in status bar 
 let g:lightline = {             
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'material',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             ['cocstatus', 'readonly', 'filename', 'modified'] ]
@@ -107,14 +107,14 @@ let g:indentLine_setColors = 0  " do not override colors of colorscheme
 
 
  " Call method on window enter 
- augroup WindowManagement
-     autocmd! 
-     autocmd WinEnter * call Handle_Win_Enter()
- augroup end 
+" augroup WindowManagement
+"     autocmd! 
+"     autocmd WinEnter * call Handle_Win_Enter()
+" augroup end 
 
-hi ActiveWindow guibg=#ffffff
-hi InactiveWindow guibg=#0D1B22
-
- function! Handle_Win_Enter()
-     setlocal winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
- endfunction
+"hi ActiveWindow guibg=#000000
+"hi InactiveWindow guibg=#0D1B22
+"
+" function! Handle_Win_Enter()
+"     setlocal winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
+" endfunction

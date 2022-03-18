@@ -7,13 +7,16 @@ endif
 
 
 call plug#begin()
-Plug 'morhetz/gruvbox'                  " Color Theme
+" Color Schemes
+"Plug 'morhetz/gruvbox'                  " Color Theme
+Plug 'marko-cerovac/material.nvim'
+
+" Other plugins
 Plug 'preservim/nerdtree'               " File Browsers
 Plug 'Xuyuanp/nerdtree-git-plugin'      " Nerdtree git plugin
 Plug 'mbbill/undotree'                  " Anzeigen von alten Revisionen
 Plug 'vim-scripts/SearchComplete'       " activate autocompletion in search 
 Plug 'itchyny/lightline.vim'            " statusbar
-Plug '9mm/vim-closer'                   " intelligent braces and co 
 Plug 'liuchengxu/vista.vim'             " show functions, variables
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'Yggdroot/indentLine'
