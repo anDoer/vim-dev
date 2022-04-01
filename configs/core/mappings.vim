@@ -54,10 +54,10 @@ inoremap <S-Tab> <C-d>
 " Navigation through splits
 nnoremap ,v :vsplit<CR>      " creates vertical split 
 nnoremap ,h :split<CR>       " creates horizontal split
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
+nnoremap <C-h> <C-W><C-H>
 
 " Navigate through buffers 
 nnoremap <silent> <leader>k :bp!<CR>
@@ -70,10 +70,10 @@ nnoremap <silent> tc :tabc<CR>
 " gT navigate to prev tab
 
 " Resizing splits 
-nnoremap <silent> <C-Right> :vertical resize +5<CR>
-nnoremap <silent> <C-Left> :vertical resize -5<CR>
-nnoremap <silent> <C-Up> :resize +5<CR>
-nnoremap <silent> <C-Down> :resize -5<CR>
+nnoremap <silent> <A-h> :vertical resize +5<CR>
+nnoremap <silent> <A-l> :vertical resize -5<CR>
+nnoremap <silent> <A-k> :resize +5<CR>
+nnoremap <silent> <A-j> :resize -5<CR>
 nnoremap ,= <C-w>=
 
 " Select entire content 
