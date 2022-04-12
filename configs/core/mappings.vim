@@ -70,8 +70,8 @@ nnoremap <silent> tc :tabc<CR>
 " gT navigate to prev tab
 
 " Resizing splits 
-nnoremap <silent> <A-h> :vertical resize +5<CR>
-nnoremap <silent> <A-l> :vertical resize -5<CR>
+nnoremap <silent> <A-l> :vertical resize +5<CR>
+nnoremap <silent> <A-h> :vertical resize -5<CR>
 nnoremap <silent> <A-k> :resize +5<CR>
 nnoremap <silent> <A-j> :resize -5<CR>
 nnoremap ,= <C-w>=
