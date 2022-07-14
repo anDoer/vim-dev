@@ -8,7 +8,7 @@ endif
 
 call plug#begin()
 " Color Schemes
-"Plug 'morhetz/gruvbox'                  " Color Theme
+Plug 'morhetz/gruvbox'                  " Color Theme
 Plug 'marko-cerovac/material.nvim'
 
 " Other plugins
