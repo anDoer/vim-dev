@@ -7,6 +7,7 @@ echo "RUN adduser --disabled-password --gecos \"\" -u $UID $USERNAME"  >> Docker
 echo "USER $USERNAME" >> Dockerfile
 
 echo "WORKDIR /home/$USERNAME" >> Dockerfile
+echo "RUN echo ASDASDasdasd" >> Dockerfile
 echo "RUN git clone -b new https://github.com/anDoer/vim-dev.git " >> Dockerfile
 echo "WORKDIR /home/$USERNAME/vim-dev" >> Dockerfile
 echo "RUN bash install.sh" >> Dockerfile
