@@ -1,10 +1,9 @@
 return {
-    "ntevearc/dressing.nvim",
+    "stevearc/dressing.nvim",
     opts = {
         select = {
             backend = { "telescope", "builtin" },
         },
     },
-    lazy = false,
-    priority=900
+    lazy = true,
 }
