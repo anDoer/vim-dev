@@ -5,5 +5,6 @@ return {
             backend = { "telescope", "builtin" },
         },
     },
-    lazy = true,
+    lazy = false,
+    priority=900
 }
